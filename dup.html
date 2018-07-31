@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Print Duplicate char in string</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	  
+
+	   function repeatCh(str) {
+	   	// body...
+	   	 return str.toLowerCase().split("").sort().join("").match(/(.)\1+/g);
+	   }
+
+	  document.write(repeatCh('aravind'));
+
+	</script>
+
+	
+
+</body>
+</html>
