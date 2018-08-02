@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Occurrence of the character</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		function rOccurrenceOfChar(str) {
+
+			if (str.length < 2) 
+				return str; 
+		    var permutations = []; 
+		    for (var i=0; i<str.length; i++) {
+		    	var char = str[i];
+		    	if (str.indexOf(char) != i) 
+		    		continue;          
+
+		    	var remainingString = str.slice(0,i) + str.slice(i+1,str.length); 
+
+		    	for (var subPermutation of rOccurrenceOfChar(remainingString))
+		    		permutations.push(char + subPermutation)
+		    	}
+		    	return permutations;
+	  	}
+
+
+	  	document.write(rOccurrenceOfChar("ab"));
+
+
+
+
+	</script>
+
+</body>
+</html>
