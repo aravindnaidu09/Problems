@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Comparing two Objects</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+        function countProperties(obj) {
+        	var count = 0;
+        	for(var prop in obj) {
+        		if(obj.hasOwnProperty(prop))
+        			++count;
+            }
+
+            return count;
+        }
+
+
+		function cTObjects(x,y) {
+
+			var oT1 = checkIfObjectOrNot(x);
+			var oT2 = checkIfObjectOrNot(y);
+
+			if (oT1) {
+				return "Only oT1 is object";
+			} else if (oT2) {
+				return "Only oT2 is object";
+			} else if (oT1 && oT2) {
+				if (evaluateObjects(x,y)) 
+				return "Both x and y are Objects";
+			} else {
+				if (evaluteArrays(x,y)) 
+				return "Both x and y are Arrays";
+			}
+
+			return "";
+			
+		}
+
+		function evaluteArrays(ar1,ar2) {
+
+			if (ar1 === ar2 ) return true;
+
+			if (ar1.length != ar2.length) return false;
+
+			for(var i=0;i<ar1.length;i++){
+
+				if(ar1[i] !== ar2[i])
+					return false;
+
+			}
+
+			return true;
+
+		}
+
+		function evaluateObjects(o1,o2) {
+
+			 return JSON.stringify(o1) === JSON.stringify(o2);
+			
+		}
+
+
+
+		function checkIfObjectOrNot(o) {
+			if (!Array.isArray(o)) {
+				return true;
+			}
+			return false;
+		}
+
+
+
+	</script>
+
+</body>
+</html>
