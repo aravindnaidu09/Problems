@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CallBack functions</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		var arr1 = ['a','b','c'];
+		var arr2 = [1,2,3];
+
+
+		for (var i = 0; i < arr1.length; i++) {
+			arr1[i]
+		}
+
+	    var newList = function(a,b){
+	    	let l = a.length+b.length;
+	    	let r = [];
+	    	let j=0,k=0;
+	    	for(let i=0; i<l;i++) {
+	    		if(i%2==0) {
+	    			r[i]=a[j++];
+	    			} else {
+	    				r[i]=b[k++];
+	    			}
+
+	    	    }
+	    	return r;
+	    }
+
+	    console.log(newList(arr1,arr2));
+
+	  
+
+
+        
+	
+	</script>
+
+</body>
+</html>
