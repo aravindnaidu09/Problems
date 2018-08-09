@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vowel OR Consonant</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		function EnterChar(ch) {
+			return (/^[aeiou]$/i).test(ch);
+		}
+
+		var enteredChar = 'a';
+
+		if (EnterChar(enteredChar)) {
+
+			console.log("Entered Character is a Vowel");
+
+		} else {
+			console.log("Entered Character is a Consonant");
+		}
+
+
+
+	</script>
+
+</body>
+</html>

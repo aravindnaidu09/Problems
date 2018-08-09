@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Factorial of a Number</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		function factorialize(num) {
+			if (num === 0 || num === 1)
+				return 1;
+			for (var i = num - 1; i >= 1; i--) {
+				num *= i;
+		    }
+		    return num;
+		}
+	</script>
+
+</body>
+</html>
