@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number into Array</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		function numToArr(num) {
+
+			var digits = num.toString().split('');
+			var arrDigits = digits.map(Number);
+
+		    return arrDigits;
+		}
+
+		console.log(numToArr(2342));
+	</script>
+
+</body>
+</html>

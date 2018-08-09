@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Copy of an Array</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		function arrayRotateOne(arr, reverse){
+			if(reverse)
+				arr.unshift(arr.pop())
+			else
+				arr.push(arr.shift())
+			return arr
+		}
+
+		console.log(arrayRotateOne([1,2,3,4,5,6]));
+	</script>
+
+</body>
+</html>
