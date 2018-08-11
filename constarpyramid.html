@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Consecutive row star pyramid</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		function generatePyramid(num) {
+			var output="";
+			for (var i = 1; i <= num; i++) {
+				for (var j = 1; j <= i; j++) {
+					output+=j + "     ";
+		        }
+		        console.log(output);
+		        output="";
+		    }
+		}  
+
+		console.log(generatePyramid(3));
+	</script>
+
+</body>
+</html>
