@@ -6,18 +6,19 @@
 <body>
 
 	<script type="text/javascript">
-		function generatePyramid(num) {
-			var output="";
-			for (var i = 1; i <= num; i++) {
-				for (var j = 1; j <= i; j++) {
-					output+=j + "     ";
-		        }
-		        console.log(output);
-		        output="";
+		function displayPyramid(n) {
+			for (var i = 0; i < n; i++) {
+				var str = '';
+				for (var j = 1; j < n-i; j++) {
+					str = str + ' ';
+			    }
+			    for (var k = 1; k <= (i+1); k++) {
+			    	str = str + ' *';
+			    }
+			    console.log(str);
 		    }
-		}  
-
-		console.log(generatePyramid(3));
+		}
+		console.log(displayPyramid(3));
 	</script>
 
 </body>
